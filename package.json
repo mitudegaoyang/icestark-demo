@@ -1,5 +1,5 @@
 {
-    "name": "aims",
+    "name": "icestark-demo",
     "private": true,
     "workspaces": [
         "packages/icestark-layout",
