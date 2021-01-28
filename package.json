@@ -1,0 +1,10 @@
+{
+    "name": "aims",
+    "private": true,
+    "workspaces": [
+        "packages/icestark-layout",
+        "packages/icestark-child-icejs",
+        "packages/icestark-child-react",
+        "packages/icestark-child-vue"
+    ]
+}
