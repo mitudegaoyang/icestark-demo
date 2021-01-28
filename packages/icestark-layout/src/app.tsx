@@ -37,8 +37,10 @@ const appConfig: IAppConfig = {
         sandbox: true,
         // React app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-seller-react-16
         url: [
-          '//ice.alicdn.com/icestark/child-seller-react/index.js',
-          '//ice.alicdn.com/icestark/child-seller-react/index.css',
+          // '//ice.alicdn.com/icestark/child-seller-react/index.js',
+          // '//ice.alicdn.com/icestark/child-seller-react/index.css',
+          '//localhost:3334/js/index.js',
+          '//localhost:3334/css/index.css',
         ],
       }, {
         path: '/waiter',
