@@ -27,3 +27,7 @@ yarn
 ```shell
 yarn workspace [sub-project-name] start
 ```
+
+## 4、常见问题
+
+* ice-stark版本2.1.0会引发使用entry引用微应用时，资源路径异常的问题。需手动将版本更改为2.0.2方可解决。
