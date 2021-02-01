@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { Grid, Loading } from '@alifd/next';
+import { Grid, Loading, Button } from '@alifd/next';
 import IceContainer from '@icedesign/container';
 import PageTitle from '@/components/PageTitle';
+import { useHistory } from "react-router-dom";
 
 import styles from './index.module.scss';
 
@@ -73,11 +74,12 @@ const mockData = () => {
 export default function Detail() {
   const [isLoading, setLoading] = useState(false);
   const [data, setData] = useState({});
+  let history = useHistory();
 
   useEffect(() => {
     async function fetchData() {
       await setLoading(true);
-      const { data: resData } = await mockApi();
+      const { data: resData }: any = await mockApi();
       await setData(resData);
       await setLoading(false);
     }
@@ -94,9 +96,22 @@ export default function Detail() {
 
   const basic = (data && data.basic) || [];
   const more = (data && data.more) || [];
+
+  const goHome = () => {
+    function handleClick() {
+      history.push('/list');
+    }
+
+    return (
+      <>
+        <Button type="primary" onClick={handleClick}>useHistory返回</Button>
+      </>
+    )
+  }
+
   return (
     <IceContainer>
-      <PageTitle title="商家详情" />
+      <PageTitle title="商家详情" subTitle={goHome()} />
       <Loading visible={isLoading} inline={false}>
         <div className={styles.infoColumn}>
           <h5 className={styles.infoColumnTitle}>基本信息</h5>
