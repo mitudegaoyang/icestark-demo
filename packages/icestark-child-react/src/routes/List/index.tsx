@@ -57,8 +57,8 @@ export default function List() {
   };
 
   return (
-    <Content>
-      <PageTitle title="商家列表" />
+    <Content className={styles.siteLayout}>
+      <PageTitle title="小二列表" />
       <Table
         loading={isLoading}
         dataSource={data}

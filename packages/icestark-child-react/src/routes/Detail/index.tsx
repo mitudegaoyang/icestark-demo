@@ -126,8 +126,8 @@ export default function Detail() {
   const basic = (data && data.basic) || [];
   const more = (data && data.more) || [];
   return (
-    <Content>
-      <PageTitle title="商家详情" subTitle={goHome()} />
+    <Content className={styles.siteLayout}>
+      <PageTitle title="小二详情" subTitle={goHome()} />
       <Spin spinning={isLoading}>
         <div className={styles.infoColumn}>
           <h5 className={styles.infoColumnTitle}>基本信息</h5>

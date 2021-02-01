@@ -15,8 +15,8 @@ export default function List() {
 
   return (
     <Layout>
-      <Content>
-        <PageTitle title="商家首页" />
+      <Content className={styles.siteLayout}>
+        <PageTitle title="小二首页" />
         <Link className={styles.link} to="/list">Link子应用内跳转</Link>
         <br />
         <br />

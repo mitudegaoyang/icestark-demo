@@ -35,7 +35,7 @@ export default function List() {
   useEffect(() => {
     async function fetchData() {
       await setLoading(true);
-      const { data: resData } = await mockApi();
+      const { data: resData }: any = await mockApi();
       await setData(Array.isArray(resData) ? resData : []);
       await setLoading(false);
     }
@@ -80,13 +80,13 @@ export default function List() {
           dataIndex="detail"
           key="detail"
           width={200}
-          cell={() => (
+          cell={(value, index, record) => (
             <div>
               <a className={styles.link} onClick={() => Message.success('暂不支持修改合同')}>
                 修改
               </a>
               <span className={styles.separator} />
-              <Link className={styles.link} to="/detail">
+              <Link className={styles.link} to={`/list/detail/${data[index].id}`}>
                 查看
               </Link>
             </div>
