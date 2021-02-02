@@ -32,7 +32,7 @@ const appConfig: IAppConfig = {
        * }
        */
       const apps = [{
-        path: '/seller',
+        path: (process.env.NODE_ENV === "development" ? "" : "/icestark-demo") + '/seller',
         title: '商家平台',
         sandbox: true,
         umd: true,
@@ -48,7 +48,7 @@ const appConfig: IAppConfig = {
           '//www.gaotianyang.top/icestark-demo/subapp/icestark-child-icejs/css/index.css',
         ],
       }, {
-        path: '/waiter',
+        path: (process.env.NODE_ENV === "development" ? "" : "/icestark-demo") + '/waiter',
         title: '小二平台',
         sandbox: true,
         // url: [
@@ -61,7 +61,7 @@ const appConfig: IAppConfig = {
         // entry: '//www.gaotianyang.top/icestark-waiter/build/index.html',
         entry: '//www.gaotianyang.top/icestark-demo/subapp/icestark-child-react/index.html',
       }, {
-        path: '/angular',
+        path: (process.env.NODE_ENV === "development" ? "" : "/icestark-demo") + '/angular',
         title: 'Angular',
         sandbox: true,
         // Angular app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-common-angular-9

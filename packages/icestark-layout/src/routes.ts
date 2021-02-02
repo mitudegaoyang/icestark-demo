@@ -4,13 +4,13 @@ import Login from '@/pages/Login';
 import NotFound from '@/components/NotFound';
 
 const routes = [{
-  path: '/about',
+  path: (process.env.NODE_ENV === "development" ? "" : "/icestark-demo") + '/about',
   component: About,
 }, {
-  path: '/login',
+  path: (process.env.NODE_ENV === "development" ? "" : "/icestark-demo") + '/login',
   component: Login,
 }, {
-  path: '/',
+  path: (process.env.NODE_ENV === "development" ? "" : "/icestark-demo") + '/',
   exact: true,
   component: Home,
 }, {
