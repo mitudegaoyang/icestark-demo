@@ -38,16 +38,19 @@ function notFound(props: any) {
 
 function App(props: any) {
   return (
-    <Router basename={getBasename()}>
-      <Switch>
-        <Route exact path="/" component={Home}></Route>
-        <Route exact path="/list" component={List}></Route>
-        <Route exact path="/list/detail/:contractId" component={Detail} />
-        <Route
-          component={notFound}
-        />
-      </Switch>
-    </Router>
+    <div>
+      <h3 className="title">小二平台-基于react搭建的微应用</h3>
+      <Router basename={getBasename()}>
+        <Switch>
+          <Route exact path="/" component={Home}></Route>
+          <Route exact path="/list" component={List}></Route>
+          <Route exact path="/list/detail/:contractId" component={Detail} />
+          <Route
+            component={notFound}
+          />
+        </Switch>
+      </Router>
+    </div>
   );
 }
 
