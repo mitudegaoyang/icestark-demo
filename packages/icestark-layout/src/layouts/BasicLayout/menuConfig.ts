@@ -1,19 +1,19 @@
 const headerMenuConfig = [];
-
+const baseUrl = (process.env.NODE_ENV === "development" ? "" : "/icestark-demo")
 const asideMenuConfig = [
   {
     name: 'Home',
-    path: '/',
+    path: baseUrl + '/',
     icon: 'chart-pie',
   },
   {
     name: 'About',
-    path: '/about',
+    path: baseUrl + '/about',
     icon: 'chart-pie',
   },
   {
     name: 'Login',
-    path: '/login',
+    path: baseUrl + '/login',
     icon: 'account',
   },
   {
@@ -21,11 +21,11 @@ const asideMenuConfig = [
     icon: 'set',
     children: [
       {
-        path: '/angular',
+        path: baseUrl + '/angular',
         name: 'router contact',
       },
       {
-        path: '/angular/detail',
+        path: baseUrl + '/angular/detail',
         name: 'router detail',
       },
     ],
@@ -35,19 +35,19 @@ const asideMenuConfig = [
     icon: 'atm',
     children: [
       {
-        path: '/seller',
+        path: baseUrl + '/seller',
         name: '商家首页',
       },
       {
-        path: '/seller/list',
+        path: baseUrl + '/seller/list',
         name: '商家列表',
       },
       {
-        path: '/seller/detail',
+        path: baseUrl + '/seller/detail',
         name: '商家详情',
       },
       {
-        path: '/seller/404',
+        path: baseUrl + '/seller/404',
         name: '商家 404',
       },
     ],
@@ -57,19 +57,19 @@ const asideMenuConfig = [
     icon: 'account',
     children: [
       {
-        path: '/waiter',
+        path: baseUrl + '/waiter',
         name: '小二首页',
       },
       {
-        path: '/waiter/list',
+        path: baseUrl + '/waiter/list',
         name: '小二列表',
       },
       {
-        path: '/waiter/detail',
+        path: baseUrl + '/waiter/detail',
         name: '小二详情',
       },
       {
-        path: '/waiter/404',
+        path: baseUrl + '/waiter/404',
         name: '小二 404',
       },
     ],
