@@ -3,14 +3,16 @@ import About from '@/pages/About';
 import Login from '@/pages/Login';
 import NotFound from '@/components/NotFound';
 
+const baseUrl = localStorage.baseUrl
+
 const routes = [{
-  path: (process.env.NODE_ENV === "development" ? "" : "/icestark-demo") + '/about',
+  path: baseUrl + '/about',
   component: About,
 }, {
-  path: (process.env.NODE_ENV === "development" ? "" : "/icestark-demo") + '/login',
+  path: baseUrl + '/login',
   component: Login,
 }, {
-  path: (process.env.NODE_ENV === "development" ? "" : "/icestark-demo") + '/',
+  path: baseUrl + '/',
   exact: true,
   component: Home,
 }, {

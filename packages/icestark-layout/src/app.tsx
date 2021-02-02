@@ -4,6 +4,10 @@ import { ConfigProvider } from '@alifd/next';
 import PageLoading from '@/components/PageLoading';
 import FrameworkLayout from '@/layouts/FrameworkLayout';
 
+localStorage.setItem("baseUrl", process.env.NODE_ENV === "development" ? "" : "/icestark-demo")
+
+const baseUrl = localStorage.baseUrl
+
 const appConfig: IAppConfig = {
   app: {
     rootId: 'icestark-container',
@@ -32,7 +36,7 @@ const appConfig: IAppConfig = {
        * }
        */
       const apps = [{
-        path: (process.env.NODE_ENV === "development" ? "" : "/icestark-demo") + '/seller',
+        path: baseUrl + '/seller',
         title: '商家平台',
         sandbox: true,
         umd: true,
@@ -48,7 +52,7 @@ const appConfig: IAppConfig = {
           '//www.gaotianyang.top/icestark-demo/subapp/icestark-child-icejs/css/index.css',
         ],
       }, {
-        path: (process.env.NODE_ENV === "development" ? "" : "/icestark-demo") + '/waiter',
+        path: baseUrl + '/waiter',
         title: '小二平台',
         sandbox: true,
         // url: [
@@ -61,7 +65,7 @@ const appConfig: IAppConfig = {
         // entry: '//www.gaotianyang.top/icestark-waiter/build/index.html',
         entry: '//www.gaotianyang.top/icestark-demo/subapp/icestark-child-react/index.html',
       }, {
-        path: (process.env.NODE_ENV === "development" ? "" : "/icestark-demo") + '/angular',
+        path: baseUrl + '/angular',
         title: 'Angular',
         sandbox: true,
         // Angular app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-common-angular-9
