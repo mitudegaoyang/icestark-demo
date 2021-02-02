@@ -42,8 +42,10 @@ const appConfig: IAppConfig = {
           // '//ice.alicdn.com/icestark/child-seller-react/index.css',
           // '//localhost:3334/js/index.js',
           // '//localhost:3334/css/index.css',
-          '//www.gaotianyang.top/icestark-seller/js/index.js',
-          '//www.gaotianyang.top/icestark-seller/css/index.css',
+          // '//www.gaotianyang.top/icestark-seller/js/index.js',
+          // '//www.gaotianyang.top/icestark-seller/css/index.css',
+          '//www.gaotianyang.top/icestark-demo/subapp/icestark-child-icejs/js/index.js',
+          '//www.gaotianyang.top/icestark-demo/subapp/icestark-child-icejs/css/index.css',
         ],
       }, {
         path: '/waiter',
@@ -56,7 +58,8 @@ const appConfig: IAppConfig = {
         //   '//localhost:3001/static/js/bundle.js',
         // ]
         // entry: '//localhost:3000/',
-        entry: '//www.gaotianyang.top/icestark-waiter/build/index.html',
+        // entry: '//www.gaotianyang.top/icestark-waiter/build/index.html',
+        entry: '//www.gaotianyang.top/icestark-demo/subapp/icestark-child-react/index.html',
       }, {
         path: '/angular',
         title: 'Angular',
