@@ -61,7 +61,7 @@ const appConfig: IAppConfig = {
         // entry: '//www.gaotianyang.top/icestark-waiter/build/index.html',
         entry: '//www.gaotianyang.top/icestark-demo/subapp/icestark-child-react/index.html',
       }, {
-        path: (process.env.NODE_ENV === "development" ? "" : "/icestark-demo") + '/icestark-demo/angular',
+        path: (process.env.NODE_ENV === "development" ? "" : "/icestark-demo") + '/angular',
         title: 'Angular',
         sandbox: true,
         // Angular app demo: https://github.com/ice-lab/icestark-child-apps/tree/master/child-common-angular-9
