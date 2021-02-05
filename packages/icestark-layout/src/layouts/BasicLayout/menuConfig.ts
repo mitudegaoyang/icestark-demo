@@ -1,5 +1,6 @@
 const headerMenuConfig = [];
-const baseUrl = localStorage.baseUrl || (process.env.NODE_ENV === "development" ? "" : "/icestark-demo")
+localStorage.baseUrl || localStorage.setItem("baseUrl", process.env.NODE_ENV === "development" ? "" : "/icestark-demo")
+const baseUrl = localStorage.baseUrl
 const asideMenuConfig = [
   {
     name: 'Home',

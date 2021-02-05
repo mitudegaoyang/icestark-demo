@@ -4,8 +4,7 @@ import { ConfigProvider } from '@alifd/next';
 import PageLoading from '@/components/PageLoading';
 import FrameworkLayout from '@/layouts/FrameworkLayout';
 
-localStorage.setItem("baseUrl", process.env.NODE_ENV === "development" ? "" : "/icestark-demo")
-
+localStorage.baseUrl || localStorage.setItem("baseUrl", process.env.NODE_ENV === "development" ? "" : "/icestark-demo")
 const baseUrl = localStorage.baseUrl
 
 const appConfig: IAppConfig = {
