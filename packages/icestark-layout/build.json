@@ -1,5 +1,5 @@
 {
-  "publicPath": ".",
+  "publicPath": "/icestark-demo/",
   "plugins": [
     [
       "build-plugin-icestark",
